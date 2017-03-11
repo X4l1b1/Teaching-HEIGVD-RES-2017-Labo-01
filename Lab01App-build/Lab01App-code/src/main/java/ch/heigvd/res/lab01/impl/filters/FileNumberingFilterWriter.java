@@ -3,6 +3,7 @@ package ch.heigvd.res.lab01.impl.filters;
 import java.io.FilterWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -32,7 +33,7 @@ public class FileNumberingFilterWriter extends FilterWriter {
     try{
       super.write(lineNb + "\t");
     }catch(IOException e){
-      System.err.println(e);
+      LOG.log(Level.SEVERE, null, e);
     }
   }
 

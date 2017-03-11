@@ -1,5 +1,6 @@
 package ch.heigvd.res.lab01.impl;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -37,7 +38,7 @@ public class Utils {
           if(lines.charAt(i + 1) == '\n')
             lineSep++;
         }catch(IndexOutOfBoundsException e){
-          System.out.println(e);
+            LOG.log(Level.SEVERE, null, e);
         }
         break;
       }

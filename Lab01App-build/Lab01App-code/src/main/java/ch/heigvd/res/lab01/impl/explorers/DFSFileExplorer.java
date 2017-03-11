@@ -33,7 +33,7 @@ public class DFSFileExplorer implements IFileExplorer {
     }
     for(File f : list){
       if(f.isDirectory()){
-        explore(new File(f.getAbsolutePath()), visitor);
+        explore(f, visitor);
       }
     }
   }
